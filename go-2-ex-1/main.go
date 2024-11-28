@@ -26,12 +26,15 @@ type Profile struct {
 func main() {
 	var me = Profile{
 		// TODO: set name and birth date information
-		NumberOfSiblings: 0,   // TODO: adjust
-		ZodiacSign:       ' ', // TODO: adjust
+		FullName:         FullName{FirstName: "Jérôme", LastName: "Golaz"},
+		BirthDate:        BirthDate{Year: 2008, Month: 4, Day: 29},
+		NumberOfSiblings: 1,        // TODO: adjust
+		ZodiacSign:       '\u2649', // TODO: adjust
 	}
 	fmt.Println(me)
 
 	fmt.Println("Siblings Before:", me.NumberOfSiblings)
 	// TODO: imagine, you get a little brother or sister
+	me.NumberOfSiblings += 1
 	fmt.Println("Siblings After:", me.NumberOfSiblings)
 }
