@@ -10,17 +10,15 @@ const (
 func main() {
 	// TODO: Implement FizzBuzz using a for loop from Lower to Upper.
 	for i := Lower; i <= Upper; i++ {
-		var sAusgabe string
-		if i%3 != 0 && i%5 != 0 {
-			sAusgabe = string(i)
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Printf("FizzBuzz ")
+		} else if i%3 == 0 {
+			fmt.Printf("Fizz ")
+		} else if i%5 == 0 {
+			fmt.Printf("Buzz ")
 		} else {
-			if i%3 == 0 {
-				sAusgabe = sAusgabe + "Fizz"
-			}
-			if i%5 == 0 {
-				sAusgabe = sAusgabe + "Buzz"
-			}
+			fmt.Printf("%d", i)
 		}
-		fmt.Println(sAusgabe)
+		fmt.Println()
 	}
 }
